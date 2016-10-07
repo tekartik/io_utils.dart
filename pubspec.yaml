@@ -1,0 +1,13 @@
+name: tekartik_io_utils
+version: 0.0.1
+description: Tekartik IO utilities
+environment:
+  sdk: '>=1.19.1 <2.0.0'
+dependencies:
+  tekartik_common_utils:
+    git: git://github.com/tekartik/tekartik_common_utils.dart
+    version: '>=0.2.1'
+dev_dependencies:
+  test: any
+  dev_test: any
+
