@@ -1,8 +1,6 @@
 @TestOn("vm")
-library tekartik_io_utils.test.io_utils_import_test;
-
-import 'package:tekartik_io_utils/io_utils_import.dart';
 import 'package:dev_test/test.dart';
+import 'package:tekartik_io_utils/io_utils_import.dart';
 
 // Simply test that it exports well
 void main() {
