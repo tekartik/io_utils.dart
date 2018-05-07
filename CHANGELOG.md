@@ -1,5 +1,9 @@
 # 0.2.1
 
+- add dartVersion
+
+# 0.2.1
+
 - Add userDirectory
 
 # 0.1.0
