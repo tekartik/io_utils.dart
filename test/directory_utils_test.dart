@@ -18,5 +18,14 @@ void main() {
       userDirectory;
       userDataDirectory;
     });
+
+    test('dirSize', () async {
+      int size =
+          await dirSize("lib") + await dirSize("test") + await dirSize("tool");
+      // devPrint("size $size");
+      // allow for changes for some time
+      expect(size, greaterThan(5000));
+      expect(size, lessThan(10000));
+    });
   });
 }
