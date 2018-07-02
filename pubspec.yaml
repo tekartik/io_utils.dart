@@ -8,7 +8,9 @@ environment:
 dependencies:
   pub_semver: any
   tekartik_common_utils:
-    git: git://github.com/tekartik/common_utils.dart
+    git:
+      url: git://github.com/tekartik/common_utils.dart
+      ref: dart1
     version: '>=0.5.1'
   process_run: any
 dev_dependencies:
