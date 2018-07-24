@@ -4,7 +4,7 @@ description: Tekartik IO utilities
 author: Alexandre Roux Tekartik <alex@tekartik.com>
 homepage: https://github.com/tekartik/io_utils.dart
 environment:
-  sdk: '>=2.0.0-dev.63 <2.0.0'
+  sdk: '>=2.0.0-dev.58 <3.0.0'
 dependencies:
   pub_semver: any
   tekartik_common_utils:
@@ -15,7 +15,7 @@ dependencies:
   process_run: any
 dev_dependencies:
   test: '>=0.12.34'
-  dev_test: '>=0.11.0'
+  dev_test: '>=0.12.0'
   build_runner: '>=0.9.0'
   build_test:
 
