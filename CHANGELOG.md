@@ -1,3 +1,7 @@
+# 0.4.2
+
+* allow setting file executable permission
+
 # 0.2.3
 
 - Add dirSize utils

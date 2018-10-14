@@ -50,7 +50,7 @@ Future<int> dirSize(String path) async {
     //devPrint("$size ${fseSize} f ${fse}");
   }
 
-  await new Directory(path)
+  await Directory(path)
       .list(recursive: false, followLinks: false)
       .listen((FileSystemEntity fse) {
     //devPrint(FileSystemEntity.type(fse.path));

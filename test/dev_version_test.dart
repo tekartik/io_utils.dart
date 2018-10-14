@@ -7,7 +7,7 @@ void main() {
   //useVMConfiguration();
   group('dart_version', () {
     test('dartVersion', () {
-      expect(dartVersion, greaterThanOrEqualTo(new Version(1, 24, 3)));
+      expect(dartVersion, greaterThanOrEqualTo(Version(1, 24, 3)));
     });
   });
 }

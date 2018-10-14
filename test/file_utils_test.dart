@@ -19,8 +19,8 @@ void main() {
       }
     });
     test('setExecutablePermission', () async {
-      var dir = new Directory(join('.dart_tool', 'tekartik_io_utils',
-          'file_utils', 'setExecutablePermission'));
+      var dir = Directory(join('.dart_tool', 'tekartik_io_utils', 'file_utils',
+          'setExecutablePermission'));
       await createEmptyDir(dir.path);
 
       var file = File(join(dir.path, 'test.bin'));
