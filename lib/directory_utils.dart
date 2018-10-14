@@ -61,3 +61,11 @@ Future<int> dirSize(String path) async {
 
   return size;
 }
+
+Future createEmptyDir(String path) async {
+  var dir = Directory(path);
+  try {
+    await dir.deleteSync(recursive: true);
+  } catch (_) {}
+  await dir.create(recursive: true);
+}
