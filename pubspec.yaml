@@ -1,5 +1,5 @@
 name: tekartik_io_utils
-version: 0.4.0
+version: 0.4.3
 description: Tekartik IO utilities
 author: Alexandre Roux Tekartik <alex@tekartik.com>
 homepage: https://github.com/tekartik/io_utils.dart
@@ -11,7 +11,7 @@ dependencies:
     git:
       url: git://github.com/tekartik/common_utils.dart
       ref: dart2
-    version: '>=0.5.1'
+    version: '>=0.6.5'
   process_run: any
 dev_dependencies:
   test: '>=0.12.34'

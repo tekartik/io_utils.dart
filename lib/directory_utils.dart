@@ -39,10 +39,10 @@ Future<int> dirSize(String path) async {
     int fseSize = 0;
     //devPrint("_handle ${fse}");
     // skip link
-    if (!await FileSystemEntity.isLink(fse.path)) {
-      if (await FileSystemEntity.isFile(fse.path)) {
+    if (!FileSystemEntity.isLinkSync(fse.path)) {
+      if (FileSystemEntity.isFileSync(fse.path)) {
         fseSize = (await fse.stat()).size;
-      } else if (await FileSystemEntity.isDirectory(fse.path)) {
+      } else if (FileSystemEntity.isDirectorySync(fse.path)) {
         fseSize = await dirSize(fse.path);
       }
     }
@@ -50,7 +50,7 @@ Future<int> dirSize(String path) async {
     //devPrint("$size ${fseSize} f ${fse}");
   }
 
-  await new Directory(path)
+  await Directory(path)
       .list(recursive: false, followLinks: false)
       .listen((FileSystemEntity fse) {
     //devPrint(FileSystemEntity.type(fse.path));
@@ -60,4 +60,12 @@ Future<int> dirSize(String path) async {
   await Future.wait(futures);
 
   return size;
+}
+
+Future createEmptyDir(String path) async {
+  var dir = Directory(path);
+  try {
+    await dir.delete(recursive: true);
+  } catch (_) {}
+  await dir.create(recursive: true);
 }

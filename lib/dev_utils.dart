@@ -16,7 +16,7 @@ void devOut(Object object) {
   }
 }
 
-_devErr(Object object) {
+void _devErr(Object object) {
   if (_devErrEnabled) {
     stderr.writeln(object);
   }
