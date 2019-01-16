@@ -34,7 +34,7 @@ void main() {
         //devPrint(stat.mode.toRadixString(16));
         expect(stat.mode & executablePermissionModeMask,
             executablePermissionModeMask);
-        expect(hasExecutablePermission(file.path), true);
+        expect(hasExecutablePermissionSync(file.path), true);
 
         stat = txtFile.statSync();
         //devPrint(stat.mode.toRadixString(16));
