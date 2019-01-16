@@ -30,13 +30,13 @@ void main() {
       await Future.delayed(Duration(milliseconds: 500));
       await setExecutablePermission(file.path);
       if (supportsFilePermission) {
-        var stat = await file.stat();
+        var stat = file.statSync();
         //devPrint(stat.mode.toRadixString(16));
         expect(stat.mode & executablePermissionModeMask,
             executablePermissionModeMask);
-        expect(await hasExecutablePermission(file.path), true);
+        expect(hasExecutablePermission(file.path), true);
 
-        stat = await txtFile.stat();
+        stat = txtFile.statSync();
         //devPrint(stat.mode.toRadixString(16));
         expect(stat.mode & executablePermissionModeMask, 0);
         expect(await hasExecutablePermission(txtFile.path), false);
