@@ -1,4 +1,4 @@
-@TestOn("vm")
+@TestOn('vm')
 library tekartik_io_utils.directory_utils_test;
 
 import 'package:dev_test/test.dart';
@@ -12,17 +12,17 @@ void main() {
       if (Platform.isLinux || Platform.isMacOS) {
         expect(userDirectory, (await run('pwd', [], workingDirectory: userDirectory)).stdout as String);
       }
-      devPrint("userDirectory ${userDirectory}");
-      devPrint("userDirectory ${userDataDirectory}");
+      devPrint('userDirectory ${userDirectory}');
+      devPrint('userDirectory ${userDataDirectory}');
       */
       userDirectory;
       userDataDirectory;
     });
 
     test('dirSize', () async {
-      int size =
-          await dirSize("lib") + await dirSize("test") + await dirSize("tool");
-      // devPrint("size $size");
+      final size =
+          await dirSize('lib') + await dirSize('test') + await dirSize('tool');
+      // devPrint('size $size');
       // allow for changes for some time
       expect(size, greaterThan(5000));
       expect(size, lessThan(10000));

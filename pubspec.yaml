@@ -1,11 +1,11 @@
 name: tekartik_io_utils
-version: 0.5.2
+version: 0.6.0
 description: Tekartik IO utilities
 author: Alexandre Roux Tekartik <alex@tekartik.com>
 homepage: https://github.com/tekartik/io_utils.dart
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: '>=2.5.0 <3.0.0'
 
 dependencies:
   pub_semver: any

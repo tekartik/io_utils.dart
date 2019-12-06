@@ -1,4 +1,4 @@
-@TestOn("vm")
+@TestOn('vm')
 import 'package:dev_test/test.dart';
 import 'package:path/path.dart';
 import 'package:tekartik_io_utils/directory_utils.dart';
@@ -27,7 +27,7 @@ void main() {
       await file.writeAsString('bin', flush: true);
       var txtFile = File(join(dir.path, 'test.txt'));
       await txtFile.writeAsString('text', flush: true);
-      await Future.delayed(Duration(milliseconds: 500));
+      await Future.delayed(const Duration(milliseconds: 500));
       await setExecutablePermission(file.path);
       if (supportsFilePermission) {
         var stat = file.statSync();
