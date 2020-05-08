@@ -15,8 +15,8 @@ void main() {
       devPrint('userDirectory ${userDirectory}');
       devPrint('userDirectory ${userDataDirectory}');
       */
-      userDirectory;
-      userDataDirectory;
+      // userDirectory;
+      // userDataDirectory;
     });
 
     test('dirSize', () async {

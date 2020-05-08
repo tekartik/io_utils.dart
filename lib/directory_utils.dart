@@ -4,8 +4,10 @@ import 'dart:io' show Directory, FileSystemEntity, Platform;
 import 'package:path/path.dart';
 import 'package:tekartik_common_utils/common_utils_import.dart';
 
+@deprecated
 Map<String, String> envVars = Platform.environment;
 
+@deprecated
 String get userDirectory {
   //String os = Platform.operatingSystem;
   var home = '~';
@@ -20,6 +22,7 @@ String get userDirectory {
   return home;
 }
 
+@deprecated
 String get userDataDirectory {
   var dataDir = '.config';
   if (Platform.isMacOS) {
@@ -62,6 +65,7 @@ Future<int> dirSize(String path) async {
   return size;
 }
 
+/// Make sure the directory exists and is empty
 Future createEmptyDir(String path) async {
   var dir = Directory(path);
   try {
