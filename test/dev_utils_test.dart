@@ -1,4 +1,4 @@
-@TestOn("vm")
+@TestOn('vm')
 import 'package:dev_test/test.dart';
 import 'package:tekartik_io_utils/dev_utils.dart';
 
@@ -21,10 +21,10 @@ void defineTests([bool disableOutput = true]) {
     });
 
     test('devOut', () {
-      debugDevOut("dev print message");
+      debugDevOut('dev print message');
     });
     test('devErr', () {
-      debugDevErr("from test not supported");
+      debugDevErr('from test not supported');
     });
   });
 }

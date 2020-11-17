@@ -1,7 +1,11 @@
 language: dart
 sudo: false
 dart:
-  - dev
   - stable
+  - beta
+  - dev
 script:
-  - tool/travis.sh
+  - dart tool/travis.dart
+matrix:
+  allow_failures:
+    - dart: dev
