@@ -1,9 +1,9 @@
 language: dart
 sudo: false
 dart:
-  - 2.5.0
-  - dev
   - stable
+  - beta
+  - dev
 script:
   - dart tool/travis.dart
 matrix:
