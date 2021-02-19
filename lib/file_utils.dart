@@ -28,7 +28,7 @@ Future<bool> hasExecutablePermission(String path) async {
 Future setExecutablePermission(String path) async {
   if (supportsFilePermission) {
     // await devRun('ls', ['-l', path]);
-    await run('chmod', ['+x', path]);
+    await runExecutableArguments('chmod', ['+x', path]);
     // await devRun('ls', ['-l', path]);
   }
 }
