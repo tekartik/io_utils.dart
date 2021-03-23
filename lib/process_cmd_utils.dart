@@ -8,7 +8,7 @@ export 'package:process_run/cmd_run.dart' hide runCmd;
 
 /// Verbose run of command
 Future<ProcessResult> runCmd(ProcessCmd cmd,
-    {bool dryRun, bool oneByOne}) async {
+    {bool? dryRun, bool? oneByOne}) async {
   void _writeWorkingDirectory() {
     if (cmd.workingDirectory != '.' && cmd.workingDirectory != null) {
       stdout.writeln('[${cmd.workingDirectory}]');
@@ -18,7 +18,7 @@ Future<ProcessResult> runCmd(ProcessCmd cmd,
   if (dryRun == true) {
     _writeWorkingDirectory();
     stdout.writeln('\$ $cmd');
-    return null;
+    return ProcessResult(0, 0, null, null);
   }
   ProcessResult result;
   if (oneByOne == true) {

@@ -10,7 +10,7 @@ Map<String, String> envVars = Platform.environment;
 @deprecated
 String get userDirectory {
   //String os = Platform.operatingSystem;
-  var home = '~';
+  String? home = '~';
 
   if (Platform.isMacOS) {
     home = envVars['HOME'];
@@ -19,17 +19,17 @@ String get userDirectory {
   } else if (Platform.isWindows) {
     home = envVars['UserProfile'];
   }
-  return home;
+  return home!;
 }
 
 @deprecated
 String get userDataDirectory {
-  var dataDir = '.config';
+  String? dataDir = '.config';
   if (Platform.isMacOS) {
     dataDir = join('Library', 'Application Support');
   } else if (Platform.isWindows) {
     dataDir = envVars['LOCALAPPDATA'];
-    return dataDir;
+    return dataDir!;
   }
   return join(userDirectory, dataDir);
 }
