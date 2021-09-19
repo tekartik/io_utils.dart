@@ -4,10 +4,10 @@ import 'dart:io' show Directory, FileSystemEntity, Platform;
 import 'package:path/path.dart';
 import 'package:tekartik_common_utils/common_utils_import.dart';
 
-@deprecated
+@Deprecated('Do no use see process_run')
 Map<String, String> envVars = Platform.environment;
 
-@deprecated
+@Deprecated('Do no use')
 String get userDirectory {
   //String os = Platform.operatingSystem;
   String? home = '~';
@@ -22,7 +22,7 @@ String get userDirectory {
   return home!;
 }
 
-@deprecated
+@Deprecated('Do no use see process_run')
 String get userDataDirectory {
   String? dataDir = '.config';
   if (Platform.isMacOS) {

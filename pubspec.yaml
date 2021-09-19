@@ -1,7 +1,7 @@
 name: tekartik_io_utils
 version: 0.7.0
 description: Tekartik IO utilities
-author: Alexandre Roux Tekartik <alex@tekartik.com>
+
 homepage: https://github.com/tekartik/io_utils.dart
 publish_to: none
 
