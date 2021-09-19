@@ -9,7 +9,7 @@ void _devOut(Object object) {
 bool _devOutEnabled = true;
 bool _devErrEnabled = true;
 
-@deprecated
+@Deprecated('Dev only')
 void devOut(Object object) {
   if (_devOutEnabled) {
     _devOut(object);
@@ -22,7 +22,7 @@ void _devErr(Object object) {
   }
 }
 
-@deprecated
+@Deprecated('Dev only')
 void devErr(Object object) {
   if (_devErrEnabled) {
     _devErr(object);
