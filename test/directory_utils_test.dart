@@ -22,10 +22,11 @@ void main() {
     test('dirSize', () async {
       final size =
           await dirSize('lib') + await dirSize('test') + await dirSize('tool');
-      // devPrint('size $size');
+      //print('size $size');
+      // 9926 on linux, 10310 on windows!
       // allow for changes for some time
-      expect(size, greaterThan(5000));
-      expect(size, lessThan(10000));
+      expect(size, greaterThan(9000));
+      expect(size, lessThan(11000));
     });
   });
 }
