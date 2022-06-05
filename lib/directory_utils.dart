@@ -38,7 +38,7 @@ Future<int> dirSize(String path) async {
   var size = 0;
   final futures = <Future>[];
 
-  Future _handle(FileSystemEntity fse) async {
+  Future handleFse(FileSystemEntity fse) async {
     var fseSize = 0;
     //devPrint('_handle ${fse}');
     // skip link
@@ -57,7 +57,7 @@ Future<int> dirSize(String path) async {
       .list(recursive: false, followLinks: false)
       .listen((FileSystemEntity fse) {
     //devPrint(FileSystemEntity.type(fse.path));
-    futures.add(_handle(fse));
+    futures.add(handleFse(fse));
   }).asFuture();
 
   await Future.wait(futures);
