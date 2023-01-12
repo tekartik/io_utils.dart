@@ -58,7 +58,7 @@ Future<int> dirSize(String path) async {
       .listen((FileSystemEntity fse) {
     //devPrint(FileSystemEntity.type(fse.path));
     futures.add(handleFse(fse));
-  }).asFuture();
+  }).asFuture<void>();
 
   await Future.wait(futures);
 

@@ -27,7 +27,7 @@ void main() {
       await file.writeAsString('bin', flush: true);
       var txtFile = File(join(dir.path, 'test.txt'));
       await txtFile.writeAsString('text', flush: true);
-      await Future.delayed(const Duration(milliseconds: 500));
+      await Future<void>.delayed(const Duration(milliseconds: 500));
       await setExecutablePermission(file.path);
       if (supportsFilePermission) {
         var stat = file.statSync();
