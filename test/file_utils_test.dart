@@ -1,11 +1,11 @@
 @TestOn('vm')
 library;
 
-import 'package:dev_test/test.dart';
 import 'package:path/path.dart';
 import 'package:tekartik_io_utils/directory_utils.dart';
 import 'package:tekartik_io_utils/file_utils.dart';
 import 'package:tekartik_io_utils/io_utils_import.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('file_utils', () {
