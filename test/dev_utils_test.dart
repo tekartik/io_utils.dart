@@ -1,8 +1,8 @@
 @TestOn('vm')
 library;
 
-import 'package:dev_test/test.dart';
 import 'package:tekartik_io_utils/dev_utils.dart';
+import 'package:test/test.dart';
 
 void main() => defineTests(true);
 

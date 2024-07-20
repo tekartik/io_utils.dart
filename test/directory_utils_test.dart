@@ -1,8 +1,8 @@
 @TestOn('vm')
 library tekartik_io_utils.directory_utils_test;
 
-import 'package:dev_test/test.dart';
 import 'package:tekartik_io_utils/directory_utils.dart';
+import 'package:test/test.dart';
 
 void main() {
   //useVMConfiguration();
