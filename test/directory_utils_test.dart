@@ -1,5 +1,5 @@
 @TestOn('vm')
-library tekartik_io_utils.directory_utils_test;
+library;
 
 import 'package:tekartik_io_utils/directory_utils.dart';
 import 'package:test/test.dart';
