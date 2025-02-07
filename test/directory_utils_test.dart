@@ -24,9 +24,10 @@ void main() {
           await dirSize('lib') + await dirSize('test') + await dirSize('tool');
       //print('size $size');
       // 9926 on linux, 10310 on windows!
+      // 2025-02-07 11886 on Linux
       // allow for changes for some time
-      expect(size, greaterThan(9000));
-      expect(size, lessThan(11000));
+      expect(size, greaterThan(10000));
+      expect(size, lessThan(15000));
     });
   });
 }
