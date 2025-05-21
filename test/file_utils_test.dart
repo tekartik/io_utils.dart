@@ -21,8 +21,14 @@ void main() {
       }
     });
     test('setExecutablePermission', () async {
-      var dir = Directory(join('.dart_tool', 'tekartik_io_utils', 'file_utils',
-          'setExecutablePermission'));
+      var dir = Directory(
+        join(
+          '.dart_tool',
+          'tekartik_io_utils',
+          'file_utils',
+          'setExecutablePermission',
+        ),
+      );
       await createEmptyDir(dir.path);
 
       var file = File(join(dir.path, 'test.bin'));
@@ -34,8 +40,10 @@ void main() {
       if (supportsFilePermission) {
         var stat = file.statSync();
         //devPrint(stat.mode.toRadixString(16));
-        expect(stat.mode & executablePermissionModeMask,
-            executablePermissionModeMask);
+        expect(
+          stat.mode & executablePermissionModeMask,
+          executablePermissionModeMask,
+        );
         expect(hasExecutablePermissionSync(file.path), true);
 
         stat = txtFile.statSync();
