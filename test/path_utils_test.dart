@@ -13,34 +13,33 @@ void main() {
       expect(
         await pathFindTopLevelDirPath(
           'test',
-          pathIsTopLevel:
-              (path) => File(join(path, 'pubspec.yaml')).existsSync(),
+          pathIsTopLevel: (path) =>
+              File(join(path, 'pubspec.yaml')).existsSync(),
         ),
         projectDir,
       );
       expect(
         await pathFindTopLevelDirPath(
           '.',
-          pathIsTopLevel:
-              (path) => File(join(path, 'pubspec.yaml')).existsSync(),
+          pathIsTopLevel: (path) =>
+              File(join(path, 'pubspec.yaml')).existsSync(),
         ),
         projectDir,
       );
       expect(
         await pathFindTopLevelDirPath(
           'test',
-          pathIsTopLevel:
-              (path) =>
-                  // ignore: avoid_slow_async_io
-                  File(join(path, 'pubspec.yaml')).exists(),
+          pathIsTopLevel: (path) =>
+              // ignore: avoid_slow_async_io
+              File(join(path, 'pubspec.yaml')).exists(),
         ),
         projectDir,
       );
       expect(
         await pathFindTopLevelDirPath(
           'test',
-          pathIsTopLevel:
-              (path) => File(join(path, 'path_utils_test.dart')).existsSync(),
+          pathIsTopLevel: (path) =>
+              File(join(path, 'path_utils_test.dart')).existsSync(),
         ),
         join(projectDir, 'test'),
       );
