@@ -44,7 +44,7 @@ Future<int> dirSize(String path) async {
     // skip link
     if (!FileSystemEntity.isLinkSync(fse.path)) {
       if (FileSystemEntity.isFileSync(fse.path)) {
-        fseSize = (await fse.stat()).size;
+        fseSize = fse.statSync().size;
       } else if (FileSystemEntity.isDirectorySync(fse.path)) {
         fseSize = await dirSize(fse.path);
       }
