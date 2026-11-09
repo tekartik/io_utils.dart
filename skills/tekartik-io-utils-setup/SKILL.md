@@ -29,8 +29,8 @@ Every library imports `dart:io`, so nothing here compiles for the web.
         url: https://github.com/tekartik/io_utils.dart
       version: '>=0.8.0'
   ```
-  The README shows an additional `ref: dart3a` pinning; only use it if you must
-  stay on that legacy branch, `master` is the current 0.8.x code.
+  The default branch `master` is the current 0.8.x code (`dart3a` is an old
+  branch, do not pin it).
 * Import only the library you need; there is no single umbrella library:
   * `package:tekartik_io_utils/io_utils_import.dart` — re-exports `dart:io`
     (hiding its blocking `sleep`), `package:tekartik_common_utils/common_utils_import.dart`
@@ -71,9 +71,12 @@ Every library imports `dart:io`, so nothing here compiles for the web.
   it. Point it at a scratch path (`.dart_tool/<pkg>/...`), never at a source
   directory.
 * `dirSize(path)` sums file sizes recursively in bytes, skipping symbolic
-  links; it throws if the directory does not exist.
+  links; it throws if the directory, or one of its sub directories, cannot
+  be listed (missing, no permission).
 * `setExecutablePermission` shells out to `chmod +x` and silently does nothing
-  on Windows (`supportsFilePermission` is `false` there); guard assertions with
+  on Windows (`supportsFilePermission` is `false` there). A `chmod` failure
+  (missing file) is ignored too: check with `hasExecutablePermissionSync`
+  when it matters. Guard assertions with
   `supportsFilePermission`. `hasExecutablePermissionSync` tests
   `stat.mode & executablePermissionModeMask != 0` (any of user/group/other).
 * `pathFindTopLevelDirPath` walks from the absolute, normalized `path` up to
